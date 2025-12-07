@@ -5,7 +5,7 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0" />
 
-  <title>Her Name · Actor & Model</title>
+  <title>Her Name · Actor and Model</title>
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet"
   />
 
@@ -26,14 +26,6 @@
     body{
       font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif
     }
-    .font-display{
-      font-family:"Playfair Display",serif
-    }
-    .pill{
-      font-size:11px;
-      letter-spacing:0.14em;
-      text-transform:uppercase
-    }
     .nav-link{
       position:relative
     }
@@ -44,9 +36,9 @@
       bottom:-4px;
       width:0;
       height:2px;
-      background:linear-gradient(to right,#fb7185,#f59e0b);
+      background:#4f46e5;
       border-radius:999px;
-      transition:width .18s ease
+      transition:width .16s ease
     }
     .nav-link:hover::after{
       width:100%
@@ -57,37 +49,36 @@
     }
     .fade-in{
       opacity:0;
-      animation:softFadeUp .5s ease-out forwards
+      animation:softFadeUp .45s ease-out forwards
     }
     .delay-1{animation-delay:.08s}
     .delay-2{animation-delay:.16s}
-    .delay-3{animation-delay:.24s}
   </style>
 </head>
 
-<body class="bg-[#fdfbff] text-slate-800">
+<body class="bg-slate-50 text-slate-900">
 
 <!-- HEADER -->
-<header class="sticky top-0 z-30 bg-white/80 backdrop-blur-lg border-b border-pink-100">
+<header class="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-slate-200">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
     <!-- Logo / name -->
     <a href="#top" class="flex items-center gap-3">
-      <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-pink-300 via-rose-200 to-orange-200 flex items-center justify-center text-xs font-semibold text-slate-800">
+      <div class="w-9 h-9 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-semibold">
         <!-- initials -->
         <span>HN</span>
       </div>
       <div class="leading-tight">
-        <p class="font-display text-lg tracking-tight">
+        <p class="text-sm font-semibold tracking-tight">
           Her Name
         </p>
-        <p class="text-[11px] pill text-slate-500">
+        <p class="text-[11px] tracking-[0.16em] uppercase text-slate-500">
           Actor · Model
         </p>
       </div>
     </a>
 
     <!-- desktop nav -->
-    <nav class="hidden md:flex items-center gap-6 text-sm text-slate-600">
+    <nav class="hidden md:flex items-center gap-6 text-sm text-slate-700">
       <a href="#home" class="nav-link">Home</a>
       <a href="#about" class="nav-link">About</a>
       <a href="#showreel" class="nav-link">Showreel</a>
@@ -98,7 +89,7 @@
 
     <!-- mobile button -->
     <button id="menuButton"
-            class="md:hidden w-9 h-9 rounded-full border border-pink-200 bg-white flex items-center justify-center text-slate-700">
+            class="md:hidden w-9 h-9 rounded-full border border-slate-300 bg-white flex items-center justify-center text-slate-700">
       <i class="fa-solid fa-bars text-sm"></i>
     </button>
   </div>
@@ -106,10 +97,10 @@
 
 <!-- MOBILE MENU -->
 <div id="mobileMenu" class="hidden fixed inset-0 z-20 md:hidden">
-  <div class="absolute inset-0 bg-black/10"></div>
-  <div class="absolute inset-x-3 top-3 rounded-2xl bg-white shadow-xl border border-pink-100 p-4">
+  <div class="absolute inset-0 bg-black/20"></div>
+  <div class="absolute inset-x-4 top-4 rounded-xl bg-white shadow-xl border border-slate-200 p-4">
     <div class="flex items-center justify-between mb-3">
-      <p class="font-display text-lg">Menu</p>
+      <p class="text-sm font-semibold text-slate-800">Menu</p>
       <button onclick="closeMenu()" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">
         <i class="fa-solid fa-xmark text-sm"></i>
       </button>
@@ -128,77 +119,78 @@
 <main id="top">
 
   <!-- HERO -->
-  <section id="home" class="border-b border-pink-100 bg-gradient-to-b from-[#fff9fb] via-[#fdfbff] to-[#f4f4ff]">
+  <section id="home" class="border-b border-slate-200 bg-slate-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-16 grid md:grid-cols-2 gap-10 items-center">
       <!-- text -->
       <div class="fade-in">
-        <p class="pill text-pink-500 mb-3">
-          Theatre · Camera · Ads
+        <p class="text-[11px] tracking-[0.2em] uppercase text-slate-500 mb-3">
+          Actor · Theatre · Commercial
         </p>
 
-        <h1 class="font-display text-3xl sm:text-4xl md:text-5xl leading-tight text-slate-900 mb-3">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight mb-3">
           Her Name<br>
-          <span class="text-pink-500">Actor and model</span>
+          <span class="text-slate-600 text-[1.05rem] sm:text-lg font-normal">
+            Screen and stage performance
+          </span>
         </h1>
 
         <p class="text-sm sm:text-base text-slate-600 max-w-md mb-5">
           Theatre trained actor and commercial model based in Bangalore.
-          Comfortable on stage and on camera for ads, short films, and digital campaigns.
+          Available for films, ad films, digital campaigns, and stage work.
         </p>
 
-        <div class="flex flex-wrap gap-2 mb-5">
-          <span class="pill px-3 py-1 rounded-full bg-pink-50 text-pink-600 border border-pink-100">
+        <div class="flex flex-wrap gap-2 mb-5 text-[11px] text-slate-600">
+          <span class="px-3 py-1 rounded-full border border-slate-200 bg-white">
             Theatre roles
           </span>
-          <span class="pill px-3 py-1 rounded-full bg-amber-50 text-amber-600 border border-amber-100">
+          <span class="px-3 py-1 rounded-full border border-slate-200 bg-white">
             TV and digital ads
           </span>
-          <span class="pill px-3 py-1 rounded-full bg-sky-50 text-sky-600 border border-sky-100">
+          <span class="px-3 py-1 rounded-full border border-slate-200 bg-white">
             Print and social
           </span>
         </div>
 
         <div class="flex flex-wrap gap-3">
           <a href="#showreel"
-             class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-pink-500 text-white text-sm font-medium shadow-sm hover:bg-pink-600 transition">
+             class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-indigo-600 text-white text-sm font-medium hover:bg-indigo-700 transition">
             <i class="fa-solid fa-play text-xs"></i>
             Watch showreel
           </a>
 
           <a href="#gallery"
-             class="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-pink-200 text-sm text-pink-700 bg-white hover:bg-pink-50 transition">
+             class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-slate-300 text-sm text-slate-800 bg-white hover:bg-slate-100 transition">
             <i class="fa-regular fa-image text-xs"></i>
             View photos
           </a>
         </div>
 
         <p class="mt-4 text-xs text-slate-500">
-          Recent work for brands like
-          <span class="font-medium text-slate-800">[Brand 1]</span>,
-          <span class="font-medium text-slate-800">[Brand 2]</span>,
-          <span class="font-medium text-slate-800">[Theatre group]</span>
+          Recent work for brands and productions such as
+          <span class="font-medium text-slate-800">[Brand or theatre name]</span>.
         </p>
       </div>
 
       <!-- photo -->
       <div class="fade-in delay-1">
-        <div class="relative max-w-xs mx-auto">
-          <div class="absolute inset-0 bg-gradient-to-tr from-pink-200 via-sky-100 to-amber-200 blur-3xl opacity-70 -z-10"></div>
-          <div class="relative flex items-center justify-center">
-            <div class="w-64 h-64 sm:w-72 sm:h-72 rounded-full border-[6px] border-white shadow-[0_18px_40px_rgba(148,163,184,0.45)] overflow-hidden bg-slate-200">
-              <!-- replace src with her face shot -->
-              <img
-                src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Her portrait"
-                class="w-full h-full object-cover"
-              />
-            </div>
-          </div>
+        <div class="relative max-w-sm mx-auto">
+          <div class="absolute inset-0 bg-indigo-100 blur-3xl opacity-60 -z-10"></div>
+          <div class="relative rounded-2xl border border-slate-200 bg-white shadow-md overflow-hidden">
+            <!-- replace src with her photo -->
+            <img
+              src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Portrait of her"
+              class="w-full h-[360px] object-cover"
+            />
 
-          <div class="mt-4 flex justify-center">
-            <div class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-white border border-pink-100 text-[11px] text-slate-600 shadow-sm">
-              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-              Open for casting and auditions
+            <div class="flex items-center justify-between px-4 py-3 border-t border-slate-100 bg-slate-50">
+              <p class="text-xs text-slate-600">
+                Available for casting
+              </p>
+              <div class="flex items-center gap-1 text-xs text-slate-500">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>Based in Bangalore</span>
+              </div>
             </div>
           </div>
         </div>
@@ -208,40 +200,42 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="py-10 border-b border-pink-100 bg-white">
+  <section id="about" class="py-10 border-b border-slate-200 bg-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 grid md:grid-cols-[1.1fr,0.9fr] gap-8 items-start">
       <div class="fade-in">
-        <h2 class="font-display text-2xl sm:text-3xl text-slate-900 mb-3">
-          About her
+        <h2 class="text-xl sm:text-2xl font-semibold mb-3">
+          About
         </h2>
         <p class="text-sm sm:text-base text-slate-600 leading-relaxed mb-4">
-          She has worked in theatre, short films, and camera work for ads.
-          Strong focus on expression, presence, and natural performance in front of the camera.
+          She has experience across theatre, short films, and camera work for ads.
+          Strong focus on natural performance, expressions, and presence on both stage and set.
         </p>
 
         <div class="grid sm:grid-cols-3 gap-4 text-sm">
           <div>
-            <p class="pill text-slate-500 mb-1">Based in</p>
+            <p class="text-[11px] tracking-[0.16em] uppercase text-slate-500 mb-1">Based in</p>
             <p class="text-slate-800">Bangalore, India</p>
           </div>
           <div>
-            <p class="pill text-slate-500 mb-1">Languages</p>
+            <p class="text-[11px] tracking-[0.16em] uppercase text-slate-500 mb-1">Languages</p>
             <p class="text-slate-800">English · Hindi · [Others]</p>
           </div>
           <div>
-            <p class="pill text-slate-500 mb-1">Work</p>
+            <p class="text-[11px] tracking-[0.16em] uppercase text-slate-500 mb-1">Work focus</p>
             <p class="text-slate-800">Theatre, ads, digital</p>
           </div>
         </div>
       </div>
 
       <div class="fade-in delay-1">
-        <div class="rounded-2xl border border-pink-100 bg-[#fff9fb] p-4 sm:p-5 shadow-sm">
-          <p class="pill text-pink-500 mb-2">Highlights</p>
+        <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 sm:p-5">
+          <p class="text-[11px] tracking-[0.16em] uppercase text-slate-500 mb-2">
+            Recent highlights
+          </p>
           <ul class="space-y-2 text-sm text-slate-700">
-            <li>• Lead role in [Play name] at [Theatre or festival]</li>
-            <li>• Featured in [Brand] TV or digital ad</li>
-            <li>• Print or social campaign for [Brand or agency]</li>
+            <li>• Lead or key role in [Play name] at [Theatre or festival].</li>
+            <li>• Featured in [Brand] TV or digital commercial.</li>
+            <li>• Print or social campaign for [Brand or agency].</li>
           </ul>
         </div>
       </div>
@@ -249,19 +243,19 @@
   </section>
 
   <!-- SHOWREEL -->
-  <section id="showreel" class="py-10 border-b border-pink-100 bg-[#fdfbff]">
+  <section id="showreel" class="py-10 border-b border-slate-200 bg-slate-50">
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
       <div class="flex items-center justify-between gap-3 mb-5">
-        <h2 class="font-display text-2xl sm:text-3xl text-slate-900">
+        <h2 class="text-xl sm:text-2xl font-semibold">
           Showreel
         </h2>
         <p class="text-xs text-slate-500">
-          Add her main reel here
+          Replace this with her main reel
         </p>
       </div>
 
-      <div class="fade-in rounded-2xl border border-pink-100 bg-white shadow-sm overflow-hidden aspect-video">
-        <!-- replace URL with her real YouTube / Vimeo link -->
+      <div class="fade-in rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden aspect-video">
+        <!-- replace URL with her real YouTube or Vimeo link -->
         <iframe
           class="w-full h-full"
           src="https://www.youtube.com/embed/dQw4w9WgXcQ"
@@ -274,51 +268,51 @@
       </div>
 
       <div class="mt-5 grid sm:grid-cols-3 gap-4 text-sm fade-in delay-1">
-        <div class="rounded-xl bg-white border border-pink-100 p-3">
-          <p class="pill text-slate-500 mb-1">Ad spot</p>
-          <p class="text-slate-800">[Brand name] television or digital ad</p>
+        <div class="rounded-lg bg-white border border-slate-200 p-3">
+          <p class="text-[11px] tracking-[0.16em] uppercase text-slate-500 mb-1">Ad film</p>
+          <p class="text-slate-800">[Brand name] campaign, TV or digital.</p>
         </div>
-        <div class="rounded-xl bg-white border border-pink-100 p-3">
-          <p class="pill text-slate-500 mb-1">Short film</p>
-          <p class="text-slate-800">[Film title] role description</p>
+        <div class="rounded-lg bg-white border border-slate-200 p-3">
+          <p class="text-[11px] tracking-[0.16em] uppercase text-slate-500 mb-1">Short film</p>
+          <p class="text-slate-800">[Film title] role and credit.</p>
         </div>
-        <div class="rounded-xl bg-white border border-pink-100 p-3">
-          <p class="pill text-slate-500 mb-1">Theatre</p>
-          <p class="text-slate-800">[Play name] character name</p>
+        <div class="rounded-lg bg-white border border-slate-200 p-3">
+          <p class="text-[11px] tracking-[0.16em] uppercase text-slate-500 mb-1">Theatre</p>
+          <p class="text-slate-800">[Play name] character and venue.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- GALLERY PREVIEW -->
-  <section id="gallery" class="py-10 border-b border-pink-100 bg-white">
+  <section id="gallery" class="py-10 border-b border-slate-200 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="flex items-center justify-between gap-3 mb-5">
-        <h2 class="font-display text-2xl sm:text-3xl text-slate-900">
+        <h2 class="text-xl sm:text-2xl font-semibold">
           Photos
         </h2>
         <p class="text-xs text-slate-500">
-          Use her best 3 to 6 shots here
+          Use her best 3 to 6 images here
         </p>
       </div>
 
       <div class="grid sm:grid-cols-3 gap-4 fade-in">
-        <!-- replace all image src with her photos -->
-        <div class="rounded-2xl overflow-hidden border border-pink-100 bg-[#fff9fb]">
+        <!-- replace the src values with her photos -->
+        <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
           <img
             src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=800"
             alt="Photo 1"
             class="w-full h-64 object-cover"
           />
         </div>
-        <div class="rounded-2xl overflow-hidden border border-pink-100 bg-[#fff9fb]">
+        <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
           <img
             src="https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg?auto=compress&cs=tinysrgb&w=800"
             alt="Photo 2"
             class="w-full h-64 object-cover"
           />
         </div>
-        <div class="rounded-2xl overflow-hidden border border-pink-100 bg-[#fff9fb]">
+        <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
           <img
             src="https://images.pexels.com/photos/2100064/pexels-photo-2100064.jpeg?auto=compress&cs=tinysrgb&w=800"
             alt="Photo 3"
@@ -330,33 +324,33 @@
   </section>
 
   <!-- WORK / CREDITS -->
-  <section id="credits" class="py-10 border-b border-pink-100 bg-[#fdfbff]">
+  <section id="credits" class="py-10 border-b border-slate-200 bg-slate-50">
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
-      <h2 class="font-display text-2xl sm:text-3xl text-slate-900 mb-5">
+      <h2 class="text-xl sm:text-2xl font-semibold mb-5">
         Selected work
       </h2>
 
       <div class="space-y-4 text-sm fade-in">
-        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 border-b border-pink-100 pb-3">
+        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 border-b border-slate-200 pb-3">
           <div>
             <p class="text-slate-900">[Play name]</p>
             <p class="text-slate-500 text-xs">
-              Lead role · [Theatre group] · [Venue or festival]
+              Role · [Theatre group] · [Venue or festival].
             </p>
           </div>
-          <p class="text-xs text-pink-600 pill">
+          <p class="text-xs text-slate-600 tracking-[0.16em] uppercase">
             Theatre
           </p>
         </div>
 
-        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 border-b border-pink-100 pb-3">
+        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 border-b border-slate-200 pb-3">
           <div>
             <p class="text-slate-900">[Brand name] ad film</p>
             <p class="text-slate-500 text-xs">
-              On camera role · 30s TV or digital spot
+              Principal or featured role · 30s or 60s spot.
             </p>
           </div>
-          <p class="text-xs text-pink-600 pill">
+          <p class="text-xs text-slate-600 tracking-[0.16em] uppercase">
             Ads
           </p>
         </div>
@@ -365,10 +359,10 @@
           <div>
             <p class="text-slate-900">[Short film title]</p>
             <p class="text-slate-500 text-xs">
-              [Character] · screened at [festival or platform]
+              Role · screened at [festival or platform].
             </p>
           </div>
-          <p class="text-xs text-pink-600 pill">
+          <p class="text-xs text-slate-600 tracking-[0.16em] uppercase">
             Short film
           </p>
         </div>
@@ -379,34 +373,34 @@
   <!-- CONTACT -->
   <section id="contact" class="py-12 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center fade-in">
-      <p class="pill text-pink-500 mb-2">
+      <p class="text-[11px] tracking-[0.2em] uppercase text-slate-500 mb-2">
         Contact
       </p>
-      <h2 class="font-display text-2xl sm:text-3xl text-slate-900 mb-3">
-        For casting and bookings
+      <h2 class="text-xl sm:text-2xl font-semibold mb-3">
+        Casting and booking
       </h2>
       <p class="text-sm sm:text-base text-slate-600 max-w-xl mx-auto mb-6">
-        Available for theatre productions, ad films, digital campaigns, print shoots, and content projects.
-        For full portfolio or availability, use the contact options below.
+        Open to theatre productions, ad films, digital work, print, and content projects.
+        Reach out to request the full portfolio or to discuss a specific brief.
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-3 text-sm mb-5">
         <a href="mailto:your-email@example.com"
-           class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-pink-500 text-white font-medium shadow-sm hover:bg-pink-600 transition">
+           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition">
           <i class="fa-regular fa-envelope"></i>
           Email for casting
         </a>
 
         <a href="https://www.instagram.com/"
            target="_blank"
-           class="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-pink-200 text-pink-700 bg-white hover:bg-pink-50 transition">
+           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-slate-300 text-slate-800 bg-white hover:bg-slate-100 transition">
           <i class="fa-brands fa-instagram"></i>
           View Instagram
         </a>
       </div>
 
       <p class="text-xs text-slate-500">
-        You can replace this with a manager number or agency details later.
+        This text can be changed to an agent or manager contact later.
       </p>
     </div>
   </section>
@@ -414,13 +408,13 @@
 </main>
 
 <!-- FOOTER -->
-<footer class="border-t border-pink-100 bg-[#fff9fb] py-5">
+<footer class="border-t border-slate-200 bg-white py-5">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500">
     <span>
       © <span id="year"></span> Her Name · Actor and model
     </span>
     <span>
-      Website support by Sahil
+      Site built by Sahil
     </span>
   </div>
 </footer>
